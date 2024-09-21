@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=http://107.132.196.67/" />
+    <meta http-equiv="refresh" content="5; url=http://107.132.196.67/" />
     <title>Redirecting...</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .spinner {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
   </head>
   <body>
+    <div class="spinner"></div>
     <p>If you are not redirected automatically, follow this <a href="http://107.132.196.67/">link</a>.</p>
+
+    <script>
+      setTimeout(function() {
+        window.location.href = "http://107.132.196.67/";
+      }, 5000); // 5 seconds delay to show the loading spinner before redirect
+    </script>
   </body>
 </html>
